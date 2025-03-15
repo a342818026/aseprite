@@ -55,8 +55,6 @@ jobs:
     - name: Generating Makefiles
       shell: bash
       run: |
-        export enable_ccache=off
-        curl -L https://github.com/blueloveTH/aseprite/releases/download/v0.01/libcrypto-1_1-x64.dll --output libcrypto-1_1-x64.dll
         if [[ "${{ runner.os }}" == "Windows" ]] ; then
           export enable_ccache=off
         else
@@ -99,6 +97,5 @@ jobs:
       with:
         name: aseprite
         path: |
-          D:/a/aseprite/aseprite/build/bin/libcrypto-1_1-x64.dll
           D:/a/aseprite/aseprite/build/bin/data
           D:/a/aseprite/aseprite/build/bin/aseprite.exe
